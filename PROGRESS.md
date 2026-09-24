@@ -29,6 +29,21 @@ Running log for the unattended cloud build. Newest entry at the bottom of the lo
 
 The budget is a ceiling, not a target: an agent session moves faster than a human, so each phase finishes as soon as its exit criteria are met and the savings roll into buffer.
 
+## ▶ Resume here (for a fresh session)
+
+Concept is locked: **Still Standing** (`CONCEPT.md`). Next unchecked phase is **4 → 5**. Setup a new session needs:
+
+1. `pip install imageio-ffmpeg numpy scipy && ln -sf "$(python3 -c 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())')" /usr/local/bin/ffmpeg`
+2. Design skills fallback: `mkdir -p /tmp/skills && cd /tmp/skills && git clone --depth 1 https://github.com/pbakaus/impeccable && git clone --depth 1 https://github.com/emilkowalski/skills emil-skills && git clone --depth 1 https://github.com/leonxlnx/taste-skill`
+3. Real records (egress only allows PyPI/npm): `pip download --no-deps gmprocess==2.8.0 pystrata==0.5.4 --no-binary pystrata -d /tmp/w` then take `gmprocess/data/demo/ci38457511/raw/{CICCC.RAW,CICLC.v1,CITOW2.RAW}` (CSMIP V1 text, 100 sps, g, 3 channels each) and `pystrata-0.5.4/tests/data/NIS090.AT2` (PEER AT2, dt 0.01, g). The parsing/processing reference implementation is `research/prototype/proto.py`.
+
+Build plan (Phase 5), in order:
+- **Stack:** Vite + TypeScript + Preact (+ signals), `base: './'`, Vitest, Playwright (Chromium at `/opt/pw-browsers`), fonts via `@fontsource/*` (no CDN: jsDelivr/unpkg are egress-blocked).
+- **`scripts/build-records.ts`** (Node, run once, output committed): parse V1/AT2 → detrend, 5 % Tukey taper, 4th-order Butterworth band-pass 0.1–25 Hz zero-phase → trim by Arias 5–95 % ± pads → `src/data/records/*.json` with provenance (event, station, channel, agency, source package, license).
+- **`src/physics/` (pure, Vitest):** `fft.ts`, `filters.ts`, `site.ts` (transfer fn H=1/(cos k*H + iα* sin k*H)), `building.ts` (uniform shear building, k from T1 via ω1 = 2√(k/m)·sin(π/(2(2N+1))); bilinear storeys; Rayleigh ζ=5 %; explicit central difference with substeps; TMD = extra DOF at roof, Den Hartog tuning; base isolation = extra DOF at base), `spectrum.ts` (PSA via Nigam–Jennings or Newmark), `damage.ts` (FEMA 356 typical drifts: concrete frame 1/2/4 %, steel MRF 0.7/2.5/5 %, braced 0.5/1.5/2 %, walls 0.5/1/2 %). Tests against closed-form: uniform-shear-building eigenvalues, SDOF free vibration decay, resonance amplification 1/(2ζ), transfer-function peak at T=4H/Vs.
+- **UI:** skyline (wow) → "your building" level → sandbox, seismogram strip, spectrum chart with building period marker, share-by-URL, reduced-motion, keyboard, 375 px.
+- Then Phases 6–9 per the table above.
+
 ## Tool check (Phase 1)
 
 | Tool | Status |
