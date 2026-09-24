@@ -5,6 +5,13 @@
 
 *Facts read from the live Devpost page on 2026-09-23. ⚠ = unconfirmed, so verify before relying on it.*
 
+> **Re-verification, Wed Sep 23 2026, 10:40 PM EDT (cloud session).** This session's network policy blocks `*.devpost.com` for both curl and WebFetch, so the live overview and `/rules` pages could not be re-opened. Cross-checked through the search engine's index instead:
+> - ✅ Theme "Build bold, ship fast" and "web app, mobile app, game, hardware hack, or anything in between": matches the indexed V4 text.
+> - ✅ "Every participant who submits a project … receives a digital certificate of participation": matches.
+> - ✅ Build-during-the-event rule: prior editions state "you may use open-source libraries and templates, but the main work must be done during the event."
+> - ◻ Deadline, eligibility (13–18, US, students), prize amounts and the four criteria: **not in the index**; kept as read from the live page on Sep 23. No ⚠ items existed to resolve. The deadline is also the one the SessionStart hook prints.
+> - ➕ Prior editions found: January 2026, V2 (May 2026), V3 (Jun–Jul 2026). Earlier editions asked for a 1–3 min demo video and 2–3+ screenshots. Details: `research/RESEARCH-BRIEF.md`.
+
 ## Eligibility
 Ages 13–18, students only, **US residents**.
 

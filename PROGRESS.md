@@ -18,7 +18,7 @@ Running log for the unattended cloud build. Newest entry at the bottom of the lo
 |---|---|---|---|---|
 | 0. Countdown + plan | — | 10 min | Wed Sep 23 23:00 | ✅ |
 | 1. Tool check | — | 15 min | Wed Sep 23 23:15 | ✅ |
-| 2. Research (verify event, 5–8 winners, brief) | part of buffer | 3 h | Thu Sep 24 02:00 | ☐ |
+| 2. Research (verify event, 5–8 winners, brief) | part of buffer | 3 h | Thu Sep 24 02:00 | ✅ (search-index only, see log) |
 | 3. Concept (3 × rubric, pick, CONCEPT.md pushed) | part of buffer | 1 h | Thu Sep 24 03:00 | ☐ |
 | 4. Design direction (PRODUCT.md + DESIGN.md) | part of core | 1 h | Thu Sep 24 04:00 | ☐ |
 | 5. Build: wow moment → demo path → rest, tests, CI, deploy | ~50 % | 72 h | Sun Sep 27 04:00 | ☐ |
@@ -43,3 +43,4 @@ The budget is a ceiling, not a target: an agent session moves faster than a huma
 ## Log
 
 - **Wed Sep 23 10:35 PM EDT (169 h left):** Session start. Read CLAUDE.md, HACKATHON.md, PROMPT.md, hackathon-win SKILL + references + templates. Created PROGRESS.md. Tool check done (table above).
+- **Wed Sep 23 10:52 PM EDT (~169 h left):** Phase 2 research done. **Blocker found and worked around:** the environment's egress policy blocks devpost.com, youtube.com, huggingface.co, jsdelivr, unpkg, wikipedia, usgs.gov and most hosts, for curl *and* WebFetch. WebSearch (server-side) works, so all research went through the search index; every brief states that verification level. Prior Next Byte editions (Jan '26, V2, V3) exist but their winners aren't indexed, so the 7 briefs are same-domain winners (Gemini API Dev Competition ×4, TreeHacks 2025 ×2, Congressional App Challenge 2025 ×1). Wrote `research/winners/*.md`, `research/RESEARCH-BRIEF.md`, verification note in HACKATHON.md. Reachable hosts: npm, PyPI, Google Fonts, storage.googleapis.com, raw.githubusercontent.com. Found real ground-motion records on PyPI (USGS gmprocess: Ridgecrest 2019 raw CSMIP/SCSN; pystrata: Kobe 1995 PEER NGA).
