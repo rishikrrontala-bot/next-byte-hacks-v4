@@ -37,8 +37,8 @@ TypeScript, React, Vite, React Three Fiber/Three.js, GSAP, CSS, Vitest, and Play
 
 ## Links to verify before submission
 
-- **Canonical live app, pending logged-out verification:** https://rishikrrontala-bot.github.io/next-byte-hacks-v4/
-- **Self-hosted demo page, pending deployment and playback verification:** https://rishikrrontala-bot.github.io/next-byte-hacks-v4/demo.html
+- **Live app, verified without sign-in:** https://rishikrrontala-bot.github.io/next-byte-hacks-v4/
+- **Public demo, playback verified without sign-in:** https://rishikrrontala-bot.github.io/next-byte-hacks-v4/demo.html
 - **Repository:** https://github.com/rishikrrontala-bot/next-byte-hacks-v4
 
 The self-hosted demo page is a link. If Devpost requires a YouTube or Vimeo URL for its native video embed, add that verified public or unlisted URL before submitting.

@@ -6,4 +6,4 @@ The official submission deadline is **Wednesday, September 30, 2026 at 11:45 p.m
 2. **Native video embed, if needed:** The project includes a self-hosted `demo.html` page. If Devpost's video field will not embed it, upload the final demo to YouTube as **Unlisted or Public** or to Vimeo with public playback, then provide the playable URL. A private or login-gated video will not work for judges.
 3. **Devpost submission:** In Rishik's signed-in Devpost account, enter the verified live app and public code URLs, paste the final [submission copy](submission/DEVPOST.md), attach the five screenshots and playable video, identify Rishik as the solo builder, and submit by **9:45 p.m. EDT**. Confirm the completed submission page appears and save its URL.
 
-This handoff does **not** assert that the site is deployed, the final video is uploaded, or Devpost has accepted a submission.
+The [app](https://rishikrrontala-bot.github.io/next-byte-hacks-v4/) and [demo](https://rishikrrontala-bot.github.io/next-byte-hacks-v4/demo.html) are public and verified. GitHub CI and Pages deployment succeeded. **Devpost has not been submitted.**

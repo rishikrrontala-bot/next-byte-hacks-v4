@@ -18,3 +18,11 @@
 1. Push and verify GitHub Pages and CI.
 2. Verify logged-out live app and demo playback.
 3. Final review and Devpost submission by 21:45 EDT. Native YouTube/Vimeo embed may require an upload from Rishik's account; the public self-hosted demo is also included.
+
+## Publication verified — September 30, 2026 at 3:27 PM EDT
+
+- Product commit `8e0a6e9` is on public `main`. GitHub CI run `36765551342` and Pages deployment run `36765551208` both succeeded.
+- Fresh browser verified app HTTP 200, both numeric scenarios, correct controls, 375 px layout, and no page errors.
+- Public demo page plays the 112-second 1920×1080 video without sign-in. Captions return HTTP 200. Playback was muted.
+- Local servers stopped; ports 5173 and 5174 confirmed free.
+- Only final review, any native video embed upload, and the actual Devpost submission remain.
